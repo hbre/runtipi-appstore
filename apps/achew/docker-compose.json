@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
+  "services": [
+    {
+      "name": "achew",
+      "image": "sirgibblets/achew:v1.5.3",
+      "isMain": true,
+      "internalPort": "8000",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/achew/app/config"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/huggingface-cache",
+          "containerPath": "/root/.cache/huggingface/hub"
+        }
+      ]
+    }
+  ]
+}
