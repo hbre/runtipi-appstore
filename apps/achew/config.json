@@ -1,0 +1,19 @@
+{
+  "name": "achew",
+  "id": "achew",
+  "available": true,
+  "short_desc": "achew is an Audiobook Chapter Extraction Wizard.",
+  "author": "SirGibblets",
+  "port": 13379,
+  "categories": ["books", "media"],
+  "description": "achew is an Audiobook Chapter Extraction Wizard.",
+  "tipi_version": 2,
+  "version": "v1.5.3",
+  "source": "https://github.com/SirGibblets/achew",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1766947250016,
+  "updated_at": 1766947250016,
+  "dynamic_config": true,
+  "form_fields": []
+}
