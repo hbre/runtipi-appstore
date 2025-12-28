@@ -7,7 +7,7 @@
   "port": 13379,
   "categories": ["books", "media"],
   "description": "achew is an Audiobook Chapter Extraction Wizard.",
-  "tipi_version": 2,
+  "tipi_version": 3,
   "version": "1.5.3",
   "source": "https://github.com/SirGibblets/achew",
   "exposable": true,
