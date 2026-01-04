@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
+  "services": [
+    {
+      "name": "unifi",
+      "image": "jacobalberty/unifi:v10.0.162",
+      "isMain": true,
+      "internalPort": "8080",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/unifi",
+          "containerPath": "/unifi"
+        }
+      ],
+      "environment": [
+        {
+          "key": "SYSTEM_IP",
+          "value": "${INTERNAL_IP}"
+        },
+        {
+          "key": "TZ",
+          "value": "Europe/Berlin"
+        }
+      ],
+      "addPorts": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "tcp": true
+        },
+        {
+          "containerPort": 8443,
+          "hostPort": 8443,
+          "tcp": true
+        },
+        {
+          "containerPort": 3478,
+          "hostPort": 3478,
+          "udp": true
+        }
+      ],
+      "healthCheck": {
+        "test": "curl --fail http://localhost || exit 1",
+        "retries": 3,
+        "interval": "30s",
+        "timeout": "10s"
+      }
+    }
+  ]
+}

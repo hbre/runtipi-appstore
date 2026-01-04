@@ -1,0 +1,19 @@
+{
+  "name": "Unifi Network Application",
+  "id": "unifi",
+  "available": true,
+  "short_desc": "Unifi Network Application for managing Ubiquiti network devices.",
+  "author": "jacobalberty",
+  "port": 8080,
+  "categories": ["network", "utilities"],
+  "description": "Unifi Network Application for managing Ubiquiti network devices.",
+  "tipi_version": 1,
+  "version": "10.0.162",
+  "source": "https://github.com/jacobalberty/unifi-docker",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1766947250016,
+  "updated_at": 1766947250016,
+  "dynamic_config": true,
+  "form_fields": []
+}
